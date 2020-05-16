@@ -6,6 +6,9 @@ import 'honeycomb-chart/dist/index.css'
 class HoneycombChartExample extends React.Component {
   state = {
     option: {
+      margin: {
+        top: '5%'
+      },
       series: [
         {
           name: 'max(node:node_memory_utilisation)',
@@ -33,8 +36,8 @@ class HoneycombChartExample extends React.Component {
       ]
     }
   }
+
   render() {
-    console.log('render', this.state.option)
     return (
       <HoneycombChart className='honeycom-chart' option={this.state.option} />
     )

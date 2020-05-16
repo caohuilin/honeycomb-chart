@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { isEqual } from 'lodash'
 import {
   HoneycombChart,
   IHoneycombChartOption
@@ -50,8 +51,8 @@ export class HoneycombChartComponent extends React.Component<Props, State> {
     }
   }
 
-  getOption() {
-    const { margin, honeycomb, groups, series } = this.props.option
+  getOption(option: IOption) {
+    const { margin, honeycomb, groups, series } = option
     return {
       margin: {
         top: 0,
@@ -124,7 +125,15 @@ export class HoneycombChartComponent extends React.Component<Props, State> {
         this.addTooltip,
         this.removeTooltip
       )
-      this.hexagonChart.render(this.getOption())
+      this.hexagonChart.render(this.getOption(this.props.option))
+    }
+  }
+
+  componentWillReceiveProps(nextProps: Props) {
+    if (!isEqual(nextProps.option, this.props.option)) {
+    if (this.ref) {
+      this.hexagonChart!.render(this.getOption(nextProps.option))
+    }
     }
   }
 
