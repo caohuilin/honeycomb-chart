@@ -1,6 +1,6 @@
 {
-  "name": "honeycomb-chart-test",
-  "version": "1.0.0-beta.0",
+  "name": "honeycomb-chart",
+  "version": "1.0.0",
   "description": "蜂窝图",
   "author": "caohuilin",
   "license": "MIT",

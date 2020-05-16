@@ -14,13 +14,12 @@ npm install --save honeycomb-chart
 
 ```tsx
 import React, { Component } from 'react'
-
-import MyComponent from 'honeycomb-chart'
+import { HoneycombChart } from 'honeycomb-chart'
 import 'honeycomb-chart/dist/index.css'
 
 class Example extends Component {
   render() {
-    return <MyComponent />
+    return <HoneycombChart className="honeycomb-chart" option={option}/>
   }
 }
 ```
