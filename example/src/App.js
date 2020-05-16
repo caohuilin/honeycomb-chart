@@ -1,10 +1,44 @@
 import React from 'react'
 
-import { ExampleComponent } from 'honeycomb-chart'
+import { HoneycombChart } from 'honeycomb-chart'
 import 'honeycomb-chart/dist/index.css'
 
-const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+class HoneycombChartExample extends React.Component {
+  state = {
+    option: {
+      series: [
+        {
+          name: 'max(node:node_memory_utilisation)',
+          data: [
+            {
+              name: 'node=xs1968',
+              value: 3.399,
+              color: '#dddddd',
+              line: [{ time: 1588405300000, value: 4.8888 }]
+            },
+            {
+              name: 'node=xs1968',
+              value: 3.399,
+              color: '#dddddd',
+              line: [{ time: 1588405300000, value: 4.8888 }]
+            },
+            {
+              name: 'node=xs1968',
+              value: 3.399,
+              color: '#dddddd',
+              line: [{ time: 1588405300000, value: 4.8888 }]
+            }
+          ]
+        }
+      ]
+    }
+  }
+  render() {
+    console.log('render', this.state.option)
+    return (
+      <HoneycombChart className='honeycom-chart' option={this.state.option} />
+    )
+  }
 }
 
-export default App
+export default HoneycombChartExample

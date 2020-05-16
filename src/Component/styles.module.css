@@ -1,0 +1,46 @@
+.chart {
+  height: 100%;
+  width: 100%;
+}
+
+.tooltip {
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-align: justify;
+  padding: 7px;
+  font: 12px sans-serif;
+  background: rgba(17, 27, 39, 0.9);
+  color: #333333;
+  word-wrap: break-word;
+  border: 0px;
+  border-radius: 2px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.tooltipHeader {
+  padding-bottom: 4px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.tooltipIndicator {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  margin: 0 8px 0 0;
+  vertical-align: middle;
+}
+
+.tooltipContent {
+  color: #8accf2;
+}
+
+.tooltipLine {
+  width: 210px;
+  height: 100px;
+  margin: 5px -7px 0 -7px;
+  color: #ffffff;
+}

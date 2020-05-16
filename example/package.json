@@ -7,6 +7,8 @@
     "react": "file:../node_modules/react",
     "react-dom": "file:../node_modules/react-dom",
     "react-scripts": "file:../node_modules/react-scripts",
+    "d3": "file:../node_modules/d3",
+    "lodash": "file:../node_modules/lodash",
     "honeycomb-chart": "file:.."
   },
   "scripts": {
