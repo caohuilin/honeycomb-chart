@@ -253,7 +253,7 @@ export class HoneycombChart {
               ]) || []
             ).length
             const pointLines = Math.ceil(points / this.group.honeycombNum)
-            return radius * (pointLines * (1.5 + this.honeycomb.distance + 0.5))
+            return radius * (pointLines * (1.5 + 0.5))
           })
         ) || 0
       return maxHeight + this.group.titleHeight
@@ -284,8 +284,8 @@ export class HoneycombChart {
   ) => {
     const hexbin = d3Hexbin.hexbin()
     const radius = this.radius()
-    const partX = (Math.sqrt(3) / 2 + this.honeycomb.distance) * radius
-    const partY = (1.5 + this.honeycomb.distance) * radius
+    const partX = (Math.sqrt(3) / 2) * radius
+    const partY = 1.5 * radius
     groupG.each((group, index) => {
       const data = group.data
       const points: [number, number][] = data.map((_, index) => {
@@ -312,7 +312,7 @@ export class HoneycombChart {
           return `translate(${d.x}, ${d.y + this.group.titleHeight})`
         })
         .attr('fill', (_, index) => data[index].color)
-        .attr('d', hexbin.hexagon(radius))
+        .attr('d', hexbin.hexagon(radius - radius * this.honeycomb.distance))
         // 由于事件通过this传递dom，不能使用箭头函数
         .on('mousedown', function (_, index) {
           const d = data[index]

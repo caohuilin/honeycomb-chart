@@ -1,6 +1,6 @@
 {
-  "name": "honeycomb-chart",
-  "version": "1.0.0",
+  "name": "honeycomb-chart-test",
+  "version": "1.0.0-beta.0",
   "description": "蜂窝图",
   "author": "caohuilin",
   "license": "MIT",
@@ -29,8 +29,9 @@
     "react": "^16.0.0",
     "d3": "^5.16.0",
     "d3-hexbin": "^0.2.2",
-        "@types/lodash": "^4.14.151",
-    "lodash": "^4.17.15"
+    "@types/lodash": "^4.14.151",
+    "lodash": "^4.17.15",
+    "resize-observer-polyfill": "^1.5.1"
   },
   "devDependencies": {
     "@types/d3": "^5.7.2",
@@ -60,8 +61,9 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "^3.4.1",
-        "@types/lodash": "^4.14.151",
-    "lodash": "^4.17.15"
+    "@types/lodash": "^4.14.151",
+    "lodash": "^4.17.15",
+    "resize-observer-polyfill": "^1.5.1"
   },
   "files": [
     "dist"
