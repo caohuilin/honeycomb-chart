@@ -75,7 +75,7 @@ export class LineChart {
     axesG
       .append('g')
       .attr('class', 'x-axis')
-      .style("font-size", "7px")
+      .style('font-size', '7px')
       .attr('transform', `translate(${left}, ${this._height - bottom})`)
       .call(xAxis)
     d3.selectAll('g.x g.tick')
@@ -100,7 +100,7 @@ export class LineChart {
     axesG
       .append('g')
       .attr('class', 'y-axis')
-      .style("font-size", "7px")
+      .style('font-size', '7px')
       .attr('transform', `translate(${left}, ${top})`)
       .call(yAxis)
     d3.selectAll('g.y g.tick')

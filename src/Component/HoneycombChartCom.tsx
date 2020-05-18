@@ -131,9 +131,9 @@ export class HoneycombChartComponent extends React.Component<Props, State> {
 
   componentWillReceiveProps(nextProps: Props) {
     if (!isEqual(nextProps.option, this.props.option)) {
-    if (this.ref) {
-      this.hexagonChart!.render(this.getOption(nextProps.option))
-    }
+      if (this.ref) {
+        this.hexagonChart!.render(this.getOption(nextProps.option))
+      }
     }
   }
 

@@ -1,6 +1,8 @@
 import * as React from 'react'
 import { LineChart, ILine } from '../Chart/LineChartCore'
 
+import style from './styles.module.css'
+
 interface Props {
   data: ILine[]
 }
@@ -13,7 +15,7 @@ export class LineChartCom extends React.Component<Props, {}> {
   }
 
   render() {
-    return <div className='tooltip-line' ref={this.setRef}></div>
+    return <div className={style.tooltipLine} ref={this.setRef}></div>
   }
 
   componentDidMount() {

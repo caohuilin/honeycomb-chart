@@ -131,7 +131,7 @@ export class HoneycombChart {
       top: this.formatPrecent(top, this._height),
       left: this.formatPrecent(left, this._width),
       right: this.formatPrecent(right, this._width),
-      bottom: this.formatPrecent(bottom, this._height),
+      bottom: this.formatPrecent(bottom, this._height)
     }
   }
 
@@ -218,10 +218,10 @@ export class HoneycombChart {
     // 根据列宽计算六边形宽度
     const hexgonWidth = Math.floor(
       columnWidth /
-      ((maxPoints > this.group.honeycombNum
-        ? this.group.honeycombNum
-        : maxPoints) +
-        Math.sqrt(3) / 2)
+        ((maxPoints > this.group.honeycombNum
+          ? this.group.honeycombNum
+          : maxPoints) +
+          Math.sqrt(3) / 2)
     )
     // 计算每一个六边形直径
     const hexgonDiameter = Math.min(
@@ -234,8 +234,8 @@ export class HoneycombChart {
     return HoneycombRadius > this.honeycomb.maxRadius
       ? this.honeycomb.maxRadius
       : HoneycombRadius < this.honeycomb.minRadius
-        ? this.honeycomb.minRadius
-        : HoneycombRadius
+      ? this.honeycomb.minRadius
+      : HoneycombRadius
   }
 
   // 根据数据及半径求每一行的实际高度
@@ -249,7 +249,7 @@ export class HoneycombChart {
             const points = (
               get(this.series, [
                 line * this.group.lineGroupNum + column,
-                'data',
+                'data'
               ]) || []
             ).length
             const pointLines = Math.ceil(points / this.group.honeycombNum)
@@ -356,8 +356,10 @@ export class HoneycombChart {
   }
 
   render(option: IHoneycombChartOption) {
-    const { margin, series } = option
+    const { margin, series, honeycomb, groups } = option
     this._margin = margin
+    this.honeycomb = honeycomb
+    this.group = groups
     this.series = series
     this.renderSvg()
     this.renderBody()
