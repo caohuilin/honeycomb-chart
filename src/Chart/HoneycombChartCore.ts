@@ -282,8 +282,8 @@ export class HoneycombChart {
   renderHoneycomb = (
     groupG: d3.Selection<SVGGElement, IData, SVGGElement, unknown>
   ) => {
-    const hexbin = d3Hexbin.hexbin()
     const radius = this.radius()
+    const hexbin = d3Hexbin.hexbin().radius(radius)
     const partX = (Math.sqrt(3) / 2) * radius
     const partY = 1.5 * radius
     groupG.each((group, index) => {

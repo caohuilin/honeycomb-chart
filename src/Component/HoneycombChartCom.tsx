@@ -111,7 +111,7 @@ export class HoneycombChartComponent extends React.Component<Props, State> {
               {data.value}
             </div>
             <div className={style.tooltipContent}>{data.name}</div>
-            <LineChartCom data={data.line} />
+            {data.line.length > 0 && <LineChartCom data={data.line} />}
           </div>
         )}
       </div>
