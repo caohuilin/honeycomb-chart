@@ -126,8 +126,8 @@ export class LineChart {
   renderLine = () => {
     const _line = d3
       .line<{ time: number; value: number }>()
-      .x((d) => this._xScale!(d.time))
-      .y((d) => this._YScale!(d.value))
+      .x((d) => this._xScale!(d.time)!)
+      .y((d) => this._YScale!(d.value)!)
     const pathLines = this._bodyG!.selectAll('path.line').data([this.data])
     pathLines
       .enter()
@@ -149,6 +149,7 @@ export class LineChart {
   }
 
   dispose() {
+    // eslint-disable-next-line no-unused-expressions
     this._svg?.remove()
   }
 }
